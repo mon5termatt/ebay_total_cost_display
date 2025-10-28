@@ -1,7 +1,7 @@
 {
    "manifest_version": 3,
-   "name": "ebay Total Cost Display",
-   "version": "2.0.0",
+   "name": "eBay Total Cost Display",
+   "version": "2.0.4",
    "description": "Show the total price/cost of ebay items (price+shipping)",
    "icons": {
       "48": "icon48.png",
@@ -16,7 +16,7 @@
          "*://*.ebay.hk/*", "*://*.ebay.co.in/*", "*://*.ebay.jp/*", "*://*.ebay.co.kr/*", 
          "*://*.ebay.com.ph/*", "*://*.ebay.com.sg/*", "*://*.ebay.com.tw/*", "*://*.ebay.co.th/*", 
          "*://*.ebay.com.au/*", "*://*.ebay.co.nz/*", "*://*.ebay.com.mx/*", "*://*.ebay.co.za/*", 
-         "*://*.ebay.com/*"
+         "*://*.ebay.com/*", "*://*.ebay.com/sh/cimnext/*"
       ],
       "js": [
          "jquery-3.7.1.min.js",
@@ -25,7 +25,8 @@
          "main.js"
       ],
       "css": ["main.css"],
-      "run_at": "document_start"
+      "run_at": "document_start",
+      "all_frames": true
    }],
    "host_permissions": [
       "https://*.ebay.org/", "https://*.ebay.ca/", "https://*.ebay.at/", "https://*.ebay.cz/",

@@ -1,26 +1,9 @@
-#highlight
-{
-    background-color: #f0f0f0
-}
+/* eBay Total Cost Display Extension Styles */
 
-.clPrevImg
-{
-    min-height:200px;
-}
-
-.clPrevImg img
-{
-    padding: 1px 3px 1px 3px;
-    max-height: 200px;
-    max-width: 200px;
-}
-
-.spacer
-{
-    height: 20px;
-}
-
-#sizeSlider, #numSlider
-{
-    max-width: 400px;
+.ebay-total-cost {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.9em;
+    color: #0654ba; /* eBay blue-ish */
+    font-weight: 500;
 }
