@@ -2,7 +2,7 @@
 
 A Chrome extension that automatically calculates and displays the total cost (price + shipping) for eBay listings, making it easier to compare the true cost of items.
 
-> **Note**: This is a fork of [mon5termatt/ebay_total_cost_display](https://github.com/mon5termatt/ebay_total_cost_display) that was created to fix compatibility issues after eBay's August 2025 layout changes. The original extension stopped working due to eBay's updates, and this fork restores functionality with improved selectors and detection methods.
+> **Note**: New August 2025 layout fix by: [dpill83](https://github.com/dpill83)
 
 ## Features
 
@@ -68,13 +68,5 @@ To enable debug logging for troubleshooting:
 
 ## Credits & Original Work
 
-This extension is a fork of the original work by [mon5termatt](https://github.com/mon5termatt/ebay_total_cost_display). The original extension was available on the Chrome Web Store but stopped working after eBay's August 2025 layout changes.
-
+**New Fix by**: [dpill83](https://github.com/dpill83)
 **Original Extension**: [Chrome Web Store listing](https://chromewebstore.google.com/detail/ebay-total-cost-display/heneliofimmlbokhbapdppelcohehpam)  
-**Original Repository**: [mon5termatt/ebay_total_cost_display](https://github.com/mon5termatt/ebay_total_cost_display)
-
-This fork maintains the same functionality while adding:
-- Updated selectors for eBay's new layouts
-- Enhanced text-based price and shipping detection
-- Better support for pricing research modals
-- Improved error handling and debugging capabilities
