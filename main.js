@@ -80,7 +80,7 @@ $(function() {
               } catch (ignore) {}
             }
             var priceNum = makeANumber(priceText);
-            var shipNum = makeANumber(shipText);
+            var shipNum = parseShippingCost(shipText);
             var totalNum = priceNum + shipNum;
             var totalStr = totalNum.toFixed(2);
 
@@ -268,6 +268,26 @@ $(function() {
       return num;
     } catch (e) {
       log.warn('[ebay-total-cost] makeANumber error for input', str, e);
+      return 0;
+    }
+  }
+
+  // Shipping lines often include delivery speed ("Free delivery in 2 days").
+  // Only an explicit currency amount is a shipping charge.
+  function parseShippingCost(str) {
+    try {
+      str = String(str || '');
+      str = str.replace(/\(\s*Total\s+Cost:[^)]+\)/ig, '');
+      str = str.replace(/\b\d+\s*-\s*days?\b/ig, ' ');
+      str = str.replace(/\bin\s+\d+\s+days?\b/ig, ' ');
+      str = str.replace(/\b\d+\s+days?\b/ig, ' ');
+      var money = str.replace(/,/g, '').match(/\$\s*(\d+(?:\.\d+)?)/);
+      if (!money) return 0;
+      var num = Number(money[1]);
+      if (!isFinite(num)) return 0;
+      return num;
+    } catch (e) {
+      log.warn('[ebay-total-cost] parseShippingCost error for input', str, e);
       return 0;
     }
   }
