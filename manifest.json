@@ -22,7 +22,7 @@
          "jquery-3.7.1.min.js",
          "jquery-ui.min.js",
          "jquery.ba-dotimeout.min.js",
-         "main.js"
+         "ebay-total-cost.user.js"
       ],
       "css": ["main.css"],
       "run_at": "document_start",
